@@ -1,0 +1,7 @@
+<meta charset="utf-8">
+<input type="text" name="text" id="text"><button onclick="postText()">发送</button>
+<span id="getText"></span>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	var postText = function(){$.ajax({url:"./Ui.php?text="+$('#text').val(),success:function(data){$('#getText').empty().append('<br>'+data)}})};
+</script>
